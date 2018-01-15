@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import comps from './components/index'
 
+//引入 Element
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+
 Vue.config.productionTip = false;
 Vue.use(comps);
 

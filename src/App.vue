@@ -48,12 +48,17 @@
 			<lxm-radio-button label='3' >选项3 </lxm-radio-button>
 			<lxm-radio-button label='4' >选项4 </lxm-radio-button>
 		</lxm-radio-group>
+		<example-table></example-table>
 	</div>
 </template>
 
 <script>
+	import exampleTable from './components/common/table/elTableExample'
 	export default {
 		name: 'app',
+		components:{
+			exampleTable,
+		},
 		data() {
 			return {
 				//下拉 选择
