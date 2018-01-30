@@ -2,7 +2,7 @@
 	<div class="ibo-dropdown"  @blur="blurHide($event)" tabindex="-1" style="outline:none;">
 		<div class="ibo-dropdown-menu" @click="showOrHide($event)"  :style="propstyle">
 			<dropdownmenu :selectitemname='selectitemName' ></dropdownmenu>
-			<i class="icon bb-iconfont icon-bb-triangle" ref='triangle'></i>
+			<i class="icon bb-iconfont icon-triangle" ref='triangle'></i>
 		</div>
 		<ul class="ibo-dropdown-list" :style="listyle" ref='dropdownList'>
 			<li v-for="(item,index) in droplist" :key='index' class="ibo-dropdown-list-li" ref='dropdownLi'>
@@ -103,20 +103,6 @@
 </script>
 
 <style scoped>
-	
-	.bb-iconfont {
-	    font-family: "bbiconfont" !important;
-	    font-size: 16px;
-	    font-style: normal;
-	    -webkit-font-smoothing: antialiased;
-	    -moz-osx-font-smoothing: grayscale;
-	}
-	.icon-bb-triangle:before {
-	    content: "\E615";
-	}
-	
-	
-	
 	ul{
 		list-style-type: none;
 		margin: 0;
@@ -144,7 +130,7 @@
 	    border-color: #4db3ff;
 	    color: #fff;
 	}
-	.ibo-dropdown-menu .icon-bb-triangle{
+	.ibo-dropdown-menu .icon-triangle{
 		margin-left: 10px;
 		position: absolute;
 		top: 0;

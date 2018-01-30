@@ -6,31 +6,19 @@ import Radio from './common/radio/radio'
 import RadioGroup from './common/radio/radio-group'
 import RadioButton from './common/radio/radio-button'
 import Directive from '../assets/js/common/Vue-directive';
-
-
-Dropdown.install = function(Vue){
-	Vue.component(Dropdown.name,Dropdown);//全局注册组件
-}
-Checkbox.install = function(Vue){
-	Vue.component(Checkbox.name,Checkbox);//全局注册组件
-}
-CheckboxGroup.install = function(Vue){
-	Vue.component(CheckboxGroup.name,CheckboxGroup);//全局注册组件
-}
-CheckboxButton.install = function(Vue){
-	Vue.component(CheckboxButton.name,CheckboxButton);//全局注册组件
-}
-Radio.install = function(Vue){
-	Vue.component(Radio.name,Radio);//全局注册组件
-}
-RadioGroup.install = function(Vue){
-	Vue.component(RadioGroup.name,RadioGroup);//全局注册组件
-}
-RadioButton.install = function(Vue){
-	Vue.component(RadioButton.name,RadioButton);//全局注册组件
-}
-
-const components=[
+import Row from './common/row/row';
+import Col from './common/col/col';
+import Breadcrumb from './common/breadcrumb/breadcrumb';
+import BreadcrumbItem from './common/breadcrumb/breadcrumb-item';
+import Form from './common/form/form';
+import FormItem from './common/form/form-item';
+import Input from './common/form/input';
+import Carousel from './common/carousel/main';
+import CarouselItem from './common/carousel/item';
+//Dropdown.install = function(Vue){
+//	Vue.component(Dropdown.name,Dropdown);//全局注册组件
+//}
+const components = [
 	Dropdown,
 	Checkbox,
 	CheckboxGroup,
@@ -38,7 +26,22 @@ const components=[
 	Radio,
 	RadioGroup,
 	RadioButton,
+	Row,
+	Col,
+	Breadcrumb,
+	BreadcrumbItem,
+	Form,
+	FormItem,
+	Input,
+	Carousel,
+	CarouselItem,
 ];
+components.map( cp => {
+	cp.install = function(Vue){
+		Vue.component(cp.name,cp);//全局注册组件
+	}
+})
+
 
 const install = function(Vue,opts = {}){
 	if(install.installed) return ;
